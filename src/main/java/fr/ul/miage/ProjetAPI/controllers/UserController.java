@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import fr.ul.miage.ProjetAPI.boundary.*;
-import fr.ul.miage.ProjetAPI.entity.User;
+import fr.ul.miage.ProjetAPI.entity.Users;
 
 @RestController
  class UserController {
@@ -20,7 +20,7 @@ import fr.ul.miage.ProjetAPI.entity.User;
     //Récupérer tous les users
 
     @GetMapping("/Users")
-    List<User> getAllUsers(){
+    List<Users> getAllUsers(){
         return repo.findAll();
     }
 

@@ -4,8 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
 @Entity
-public class User {
+@AllArgsConstructor
+@NoArgsConstructor 
+public class Users {
     
     private @Id @GeneratedValue Long id;
     private String username;
@@ -22,14 +29,11 @@ public class User {
         this.username = username;
     }
     
-    User(long id, String username) {
+    Users(long id, String username) {
         this.id = id;
         this.username = username;
     }
-
-    User(){
-
-    }
+    
     @Override
     public String toString() {
         return "User [id=" + id + ", username=" + username + "]";

@@ -13,7 +13,7 @@ services:
       - pgdb
     
   pgdb:
-    image: postgres:15.0
+    image: sergeoudart/projet_api_postgre:latest
     ports:
       - "5432:5432"
     networks:
