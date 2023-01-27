@@ -1,9 +1,9 @@
 package fr.ul.miage.ProjetAPI.entity;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.sql.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -14,13 +14,9 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class OffreStage implements Serializable{
     
-    @Serial
-    private static final long serialVersionUID = 777;
-    @Id
-    private String id;
+    private @Id @GeneratedValue int id;
     private String nom;
     private String domaine;
     private String descriptionStage;
@@ -40,6 +36,28 @@ public class OffreStage implements Serializable{
     private Double latitude;
     private String telephone;
     private String url;
+
+    public OffreStage(String nom, String domaine, String descriptionStage, Date datePublication, String niveauEtudesStage, String experienceRequiseStage, Date dateDebutStage, String dureeStage, int salaireStage, String indemnisation, int organisationId, String pays, String ville, int codePostal, String rue, Double longitude, Double latitude, String telephone, String url){
+        this.nom = nom;
+        this.domaine = domaine;
+        this.descriptionStage = descriptionStage;
+        this.datePublication = datePublication;
+        this.niveauEtudesStage = niveauEtudesStage;
+        this.experienceRequiseStage = experienceRequiseStage;
+        this.dateDebutStage = dateDebutStage;
+        this.dureeStage = dureeStage;
+        this.salaireStage = salaireStage;
+        this.indemnisation = indemnisation;
+        this.organisationId = organisationId;
+        this.pays = pays;
+        this.ville = ville;
+        this.codePostal = codePostal;
+        this.rue = rue;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.telephone = telephone;
+        this.url = url;
+    }
     
     
 }
