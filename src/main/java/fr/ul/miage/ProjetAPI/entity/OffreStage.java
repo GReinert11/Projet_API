@@ -36,8 +36,16 @@ public class OffreStage implements Serializable{
     private Double latitude;
     private String telephone;
     private String url;
+    private String paysOrga;
+    private String villeOrga;
+    private int codePostalOrga;
+    private String rueOrga;
+    private String emailOrga;
+    private String telephoneOrga;
+    private String urlOrga;
+    private String statut;
 
-    public OffreStage(String nom, String domaine, String descriptionStage, Date datePublication, String niveauEtudesStage, String experienceRequiseStage, Date dateDebutStage, String dureeStage, int salaireStage, String indemnisation, int organisationId, String pays, String ville, int codePostal, String rue, Double longitude, Double latitude, String telephone, String url){
+    public OffreStage(String nom, String domaine, String descriptionStage, Date datePublication, String niveauEtudesStage, String experienceRequiseStage, Date dateDebutStage, String dureeStage, int salaireStage, String indemnisation, int organisationId, String pays, String ville, int codePostal, String rue, Double longitude, Double latitude, String telephone, String url, String paysOrga, String villeOrga, int codePostalOrga, String rueOrga, String emailOrga, String telephoneOrga, String urlOrga) {
         this.nom = nom;
         this.domaine = domaine;
         this.descriptionStage = descriptionStage;
@@ -57,6 +65,18 @@ public class OffreStage implements Serializable{
         this.latitude = latitude;
         this.telephone = telephone;
         this.url = url;
+        this.paysOrga = paysOrga;
+        this.villeOrga = villeOrga;
+        this.codePostalOrga = codePostalOrga;
+        this.rueOrga = rueOrga;
+        this.emailOrga = emailOrga;
+        this.telephoneOrga = telephoneOrga;
+        this.urlOrga = urlOrga;
+        this.statut = "vacante";
+    }
+
+    public int getId() {
+        return id;
     }
     
     

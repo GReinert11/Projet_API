@@ -14,12 +14,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor 
 public class Users {
     
-    private @Id @GeneratedValue Long id;
+    private @Id @GeneratedValue int id;
     private String username;
     public long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
     public String getUsername() {
@@ -29,8 +29,7 @@ public class Users {
         this.username = username;
     }
     
-    Users(long id, String username) {
-        this.id = id;
+    public Users(String username) {
         this.username = username;
     }
     
